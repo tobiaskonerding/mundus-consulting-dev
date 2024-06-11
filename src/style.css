@@ -1,0 +1,17 @@
+/* * {
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: black;
+  color: white;
+}
