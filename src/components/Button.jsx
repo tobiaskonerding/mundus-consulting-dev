@@ -23,7 +23,7 @@ export default function Button(props) {
   return (
     <>
       <button
-        className="py-2 px-4 my-2 rounded-md bg-violet-800 hover:bg-violet-700 active:bg-violet-700 focus:ring-1 focus:ring-violet-300"
+        className="tracking-widest py-2 px-4 my-2 rounded-md bg-violet-800 hover:bg-violet-700 active:bg-violet-700 focus:ring-1 focus:ring-violet-300"
         onClick={handleClick}
       >
         {props.buttonText}

@@ -11,7 +11,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+  }
+
+  html {
+    font-family: "Montserrat", "sans-serif";
+  }
+}
+
 body {
   background-color: black;
   color: white;
+}
+
+#hero {
+  background-image: url(../assets/background_hero.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 300px;
+  background-position-x: center;
+}
+
+#overlay-background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
 }
