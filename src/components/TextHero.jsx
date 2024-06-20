@@ -45,14 +45,14 @@ export default function TextHero() {
             : headlineIndex++;
         }
       }
-      setTimeout(typing, 225);
+      setTimeout(typing, 150);
     };
     typing();
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center">
-      <h2 className="text-center mb-3 text-5xl md:text-7xl font-extrabold tracking-wider ">
+    <div className="flex flex-col items-center justify-center">
+      <h2 className="mb-3 text-center text-5xl font-extrabold tracking-wider md:text-7xl">
         Lösungen,
         <br />
         {/* Variante 1:
@@ -64,10 +64,10 @@ export default function TextHero() {
         </span> */}
         <span id="typewriter-span"></span>
       </h2>
-      <h3 className="text-center mb-3 text-2xl font-semibold text-mc-neon-türkis">
+      <h3 className="mb-3 text-center text-2xl font-semibold text-mc-neon-türkis">
         Das kannst du erwarten:
       </h3>
-      <div className="lg:w-3/5 text-center tracking-wide">
+      <div className="text-center tracking-wide lg:w-3/5">
         <p className="mb-2 font-bold">
           Reibungslose Prozesse und Automatisierungen, die deine
           Softwarelandschaft sinnvoll miteinander verbinden und wirklich Zeit

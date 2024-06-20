@@ -14,12 +14,14 @@ export default function Button({ buttonText }) {
   };
   const overlayStyle = { background: "rgba(0, 0, 0, 0.7)" };
 
-  //State handling
+  //State handling & Variables
   const [isClicked, setClicked] = useState(false);
 
   function handleClick() {
     setClicked(isClicked ? false : true);
   }
+
+  const googleCalenderLink = import.meta.env.VITE_GOOGLE_CALENDAR_LINK;
 
   return (
     <>
@@ -50,7 +52,7 @@ export default function Button({ buttonText }) {
             Finde heraus, was für Dich möglich ist.
           </h3>
           <iframe
-            src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1-XqEe3AtU27vH78sArIv5wJCPyBvSUAXlyqv1o3ZS_OCi27Ut5-25C-4OT7UWETznyWaso6bP?gv=true"
+            src={googleCalenderLink}
             width="100%"
             height="600px"
             frameBorder="0"
