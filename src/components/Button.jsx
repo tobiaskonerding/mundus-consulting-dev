@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Popup from "reactjs-popup";
+import PropTypes from "prop-types";
 
-export default function Button(props) {
+export default function Button({ buttonText }) {
   //Popup style
   const contentStyle = {
     color: "black",
@@ -23,10 +24,10 @@ export default function Button(props) {
   return (
     <>
       <button
-        className="tracking-widest py-2 px-4 my-2 rounded-md bg-violet-800 hover:bg-violet-700 active:bg-violet-700 focus:ring-1 focus:ring-violet-300"
+        className="my-2 rounded-md bg-violet-800 px-4 py-2 tracking-widest hover:bg-violet-700 focus:ring-1 focus:ring-violet-300 active:bg-violet-700"
         onClick={handleClick}
       >
-        {props.buttonText}
+        {buttonText}
       </button>
 
       <Popup
@@ -45,7 +46,7 @@ export default function Button(props) {
           >
             &times;
           </button>
-          <h3 className="text-2xl text-center font-bold mb-3">
+          <h3 className="mb-3 text-center text-2xl font-bold">
             Finde heraus, was für Dich möglich ist.
           </h3>
           <iframe
@@ -59,3 +60,7 @@ export default function Button(props) {
     </>
   );
 }
+
+Button.propTypes = {
+  buttonText: PropTypes.string.isRequired,
+};
